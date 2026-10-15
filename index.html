@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Escuela Técnica N.º 5 – Barrio Luz, Ranelagh | Informática, Programación y Construcciones</title>
+<meta name="description" content="Conocé la Escuela de Educación Secundaria Técnica N.º 5 de Barrio Luz, Ranelagh (Berazategui): especialidades, ubicación y contacto.">
+<meta name="theme-color" content="#030814">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400;0,600;0,700;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="ill-school" viewBox="0 0 160 120"><g fill="none" stroke="#22e4ff" stroke-width="2.5" stroke-linejoin="round"><path d="M20 104V50l60-26 60 26v54zM8 104h144"/><path d="M68 74h24v30H68z" stroke="#ff7a1a"/><path d="M34 64h16v14H34zM110 64h16v14h-16zM34 84h16v12H34zM110 84h16v12h-16z"/><path d="M80 24V8h16l-4 5 4 5H80" stroke="#ff7a1a"/></g></symbol>
+<symbol id="ill-pc" viewBox="0 0 160 120"><g fill="none" stroke="#22e4ff" stroke-width="2.5" stroke-linejoin="round"><rect x="32" y="12" width="96" height="60" rx="4"/><path d="M80 72v14M56 88h48"/><rect x="26" y="98" width="108" height="14" rx="3"/><path d="M46 28h40M46 40h60M46 52h28" stroke="#ff7a1a"/></g></symbol>
+<symbol id="ill-net" viewBox="0 0 160 120"><g fill="none" stroke="#22e4ff" stroke-width="2.5"><path d="M80 24 30 90M80 24l50 66M30 90h100M80 24v44M80 68 30 90M80 68l50 22"/><circle cx="80" cy="24" r="10" fill="#071428"/><circle cx="30" cy="90" r="10" fill="#071428"/><circle cx="130" cy="90" r="10" fill="#071428"/><circle cx="80" cy="68" r="10" fill="#071428" stroke="#ff7a1a"/></g></symbol>
+<symbol id="ill-code" viewBox="0 0 160 120"><g fill="none" stroke="#22e4ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="20" y="14" width="120" height="92" rx="5"/><path d="M20 34h120"/><circle cx="32" cy="24" r="2" fill="#22e4ff"/><circle cx="42" cy="24" r="2" fill="#ff7a1a"/><path d="M54 58 40 72l14 14M106 58l14 14-14 14" stroke="#ff7a1a"/><path d="M86 54 74 90"/></g></symbol>
+<symbol id="ill-plan" viewBox="0 0 160 120"><g fill="none" stroke="#22e4ff" stroke-width="2.5" stroke-linejoin="round"><rect x="14" y="12" width="132" height="96" rx="2" stroke-dasharray="6 5" opacity=".5"/><path d="M38 88V56l42-24 42 24v32zM38 88h84"/><path d="M70 88V70h20v18"/><path d="M28 100h104M28 96v8M132 96v8" stroke="#ff7a1a"/></g></symbol>
+<symbol id="ill-tool" viewBox="0 0 160 120"><g fill="none" stroke="#22e4ff" stroke-width="2.5"><circle cx="80" cy="60" r="34" stroke-dasharray="9 8" stroke-width="9"/><circle cx="80" cy="60" r="24"/><circle cx="80" cy="60" r="9" stroke="#ff7a1a"/></g></symbol>
+</defs></svg>
+<div id="loader" aria-hidden="true">
+  <div>
+    <img src="./Assets/img/logo.jpeg" alt="" class="ld-logo" onerror="this.style.display='none'">
+    <svg viewBox="0 0 60 80"><path d="M35 2 10 45h18L22 78 52 32H33z"/></svg>
+    <p>CARGANDO ENERGÍA</p>
+  </div>
+</div>
+<div id="progress"></div>
+<canvas id="bg" aria-hidden="true"></canvas>
+<div class="orbs" aria-hidden="true"><i></i><i></i><i></i></div>
+
+<nav id="nav">
+  <div class="wrap">
+    <a class="brand" href="#inicio"><img src="./Assets/img/logo.jpeg" alt="Logo de la Técnica N.º 5" onerror="this.style.display='none'"><span>TÉCNICA N.º 5</span></a>
+    <button id="burger" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <ul class="menu" id="menu">
+      <li><a href="#escuela">Quiénes somos</a></li>
+      <li><a href="#especialidades">Especialidades</a></li>
+      <li><a href="#porque">Por qué elegirnos</a></li>
+      <li><a href="#galeria">Galería</a></li>
+      <li><a href="#llegar">Cómo llegar</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#faq">Preguntas</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+<section id="inicio">
+  <div class="wrap">
+    <div>
+      <img class="hero-logo" src="./Assets/img/logo.jpeg" alt="Logo oficial de la Técnica N.º 5" onerror="this.style.display='none'">
+      <h1>ESCUELA <span>TÉCNICA</span> N.º 5</h1>
+      <p class="sub">Barrio Luz — Ranelagh</p>
+      <p class="slogan" id="slogan" data-text="Tu futuro también se construye acá."></p>
+      <p class="lead">Conocé nuestra escuela, descubrí nuestras especialidades y explorá las oportunidades que ofrece la educación técnica para construir tu futuro.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#escuela">Conocé la escuela</a>
+        <a class="btn alt" href="#especialidades">Nuestras especialidades</a>
+        <a class="btn alt" href="#llegar">Cómo llegar</a>
+      </div>
+    </div>
+    <div class="hero-vis"><span class="chip c1"><i data-lucide="cpu"></i></span><span class="chip c2"><i data-lucide="terminal"></i></span><span class="chip c3"><i data-lucide="ruler"></i></span>
+    <div class="frame" data-parallax>
+      <!-- Para usar una foto real, reemplazá este <svg> y el <span> por: <img src="assets/escuela.jpg" alt="Frente de la Escuela Técnica N.º 5"> -->
+      <img src="./Assets/img/colegio.jpg" alt="Frente de la Escuela Técnica N.º 5" fetchpriority="high">
+      <span class="tag">Técnica N.º 5</span>
+    </div></div>
+  </div>
+</section>
+
+<div class="marq" aria-hidden="true"><div></div></div>
+
+<section id="escuela">
+  <div class="wrap">
+    <h2 class="rv">¿Quiénes <span>somos</span>?</h2>
+    <p class="lead rv">Somos la Escuela de Educación Secundaria Técnica N.º 5, en Barrio Luz, Ranelagh. La educación técnica combina conocimientos teóricos y prácticos: te ayuda a desarrollar capacidades para seguir estudiando y para prepararte para el mundo laboral.</p>
+    <div class="grid g3">
+      <article class="card rv"><i data-lucide="wrench"></i><h3>Formación técnica</h3><p>Conocimientos para entender cómo funcionan las cosas.</p></article>
+      <article class="card rv"><i data-lucide="hand"></i><h3>Aprendizaje práctico</h3><p>Se aprende también haciendo.</p></article>
+      <article class="card rv"><i data-lucide="puzzle"></i><h3>Resolución de problemas</h3><p>Pensar, probar y encontrar soluciones.</p></article>
+      <article class="card rv"><i data-lucide="lightbulb"></i><h3>Creatividad e innovación</h3><p>Ideas propias para hacer cosas nuevas.</p></article>
+      <article class="card rv"><i data-lucide="users"></i><h3>Trabajo en equipo</h3><p>Los desafíos se resuelven entre todos.</p></article>
+      <article class="card rv"><i data-lucide="rocket"></i><h3>Preparación para el futuro</h3><p>Una base para estudiar o trabajar.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="especialidades">
+  <div class="wrap">
+    <h2 class="rv">Nuestras <span>especialidades</span></h2>
+    <div class="grid g3">
+      <article class="card spec s-inf rv">
+        <div class="art"><i data-lucide="cpu"></i><i data-lucide="network"></i><i data-lucide="monitor"></i></div>
+        <h3>Informática</h3>
+        <p>Es el mundo de las computadoras, los componentes y las redes. Entender la tecnología permite usarla mejor y resolver problemas relacionados con sistemas informáticos.</p>
+      </article>
+      <article class="card spec s-prog rv">
+        <div class="art"><pre class="code" id="code" aria-hidden="true"></pre></div>
+        <h3>Programación</h3>
+        <p>Permite crear soluciones digitales, desarrollar el pensamiento lógico y resolver problemas paso a paso.</p>
+      </article>
+      <article class="card spec s-con rv">
+        <div class="art"><i data-lucide="ruler"></i><i data-lucide="building-2"></i><i data-lucide="hammer"></i></div>
+        <h3>Construcciones</h3>
+        <p>Une los conocimientos técnicos con la representación de proyectos (planos, dibujo técnico) y los procesos constructivos.</p>
+      </article>
+    </div>
+    <p class="note rv">Las especialidades se presentan de forma general. Para conocer el plan de estudios, consultá directamente en la escuela.</p>
+  </div>
+</section>
+
+<section id="porque">
+  <div class="wrap">
+    <h2 class="rv">¿Por qué elegir una <span>escuela técnica</span>?</h2>
+    <p class="lead rv">Estas son características generales de la educación técnica, no promesas de resultados ni de empleo.</p>
+    <div class="grid g3">
+      <article class="card rv"><i data-lucide="book-open-check"></i><h3>Teoría y práctica</h3><p>Formación que une lo que se piensa con lo que se hace.</p></article>
+      <article class="card rv"><i data-lucide="settings"></i><h3>Habilidades técnicas</h3><p>Desarrollo de saberes y destrezas técnicas.</p></article>
+      <article class="card rv"><i data-lucide="brain"></i><h3>Resolver problemas</h3><p>Aprender a analizar situaciones y buscar soluciones.</p></article>
+      <article class="card rv"><i data-lucide="handshake"></i><h3>Creatividad y colaboración</h3><p>Ideas propias y trabajo con otros.</p></article>
+      <article class="card rv"><i data-lucide="graduation-cap"></i><h3>Estudios superiores</h3><p>Posibilidad de continuar estudiando.</p></article>
+      <article class="card rv"><i data-lucide="briefcase"></i><h3>Mundo laboral</h3><p>Preparación para incorporarse al trabajo.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="galeria">
+  <div class="wrap">
+    <h2 class="rv">Galería</h2>
+    <p class="lead rv">Escuela, espacios y actividades. Fotos de nuestros proyectos, talleres y espacios. Tocá una para verla en grande.</p>
+    <div class="gal rv" id="gal">
+      <button data-cap="Frente de la escuela" aria-label="Ampliar: Frente de la escuela"><img src="./Assets/img/colegio.jpg" alt="Frente de la escuela" loading="lazy"><span class="tag">Frente de la escuela</span></button>
+      <button data-cap="Proyecto de informática: placa de notebook" aria-label="Ampliar: Proyecto de informática" style="--pos:center 55%"><img src="./Assets/img/informatica.jpeg" alt="Placa de notebook expuesta como proyecto de informática" loading="lazy"><span class="tag">Informática</span></button>
+      <button data-cap="Proyecto de programación: robot TEC 5" aria-label="Ampliar: Proyecto de programación" style="--pos:center 30%"><img src="./Assets/img/programacion.jpeg" alt="Robot TEC 5 impreso en 3D" loading="lazy"><span class="tag">Programación</span></button>
+      <button data-cap="Maqueta de construcciones" aria-label="Ampliar: Maqueta de construcciones"><img src="./Assets/img/construcciones.jpeg" alt="Maqueta de un edificio" loading="lazy"><span class="tag">Construcciones</span></button>
+      <button data-cap="Taller: práctica con instalaciones eléctricas" aria-label="Ampliar: Taller" style="--pos:center 40%"><img src="./Assets/img/informaticaa.jpeg" alt="Estudiantes trabajando en el taller" loading="lazy"><span class="tag">Taller</span></button>
+      <button data-cap="Aulas" aria-label="Ampliar: Aulas"><img src="./Assets/img/aulas.jpeg" alt="Aula de la escuela" loading="lazy"><span class="tag">Aulas</span></button>
+    </div>
+  </div>
+</section>
+
+<section id="llegar">
+  <div class="wrap">
+    <h2 class="rv">¿Cómo <span>llegar</span>?</h2>
+    <div class="card loc rv">
+      <div class="loc-info">
+        <i data-lucide="map-pin" class="pin"></i>
+        <h3>Escuela Técnica N.º 5</h3>
+        <p>Calle 316 N.º 1869, Ranelagh, partido de Berazategui, Buenos Aires, Argentina.</p>
+        <p>Colectivos: <span class="bus">603</span><span class="bus">619</span></p>
+        <a class="btn big" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Calle+316+1869+Ranelagh+Berazategui+Buenos+Aires+Argentina">Cómo llegar</a>
+      </div>
+      <iframe class="map" title="Mapa de la ubicación de la escuela" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Calle+316+1869+Ranelagh+Berazategui+Buenos+Aires+Argentina&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="contact">
+  <div class="wrap">
+    <h2 class="rv">Contacto</h2>
+    <div class="grid g3">
+      <a class="card rv" href="tel:+5491127613366"><i data-lucide="smartphone"></i><h3>Celular</h3><p>+54 9 11 2761-3366</p></a>
+      <a class="card rv" href="mailto:eestn5berazategui@gmail.com"><i data-lucide="mail"></i><h3>Correo</h3><p>eestn5berazategui@gmail.com</p></a>
+      <a class="card rv" target="_blank" rel="noopener" href="https://www.instagram.com/tecnica_n5_berazategui?srtk=dTh5ZGV2eGV4OWxp&amp;utm_source=qr"><i data-lucide="instagram"></i><h3>Instagram</h3><p>@tecnica_n5_berazategui</p></a>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap narrow">
+    <h2 class="rv">Preguntas <span>frecuentes</span></h2>
+    <div class="faq rv">
+      <details><summary>¿Dónde queda la Técnica N.º 5?</summary><p>En Calle 316 N.º 1869, Ranelagh, partido de Berazategui, Buenos Aires. Podés abrir la ubicación en <a href="#llegar">Cómo llegar</a>.</p></details>
+      <details><summary>¿Qué especialidades tiene?</summary><p>Informática, Programación y Construcciones. Para conocer el plan de estudios, consultá directamente en la escuela.</p></details>
+      <details><summary>¿Qué colectivos llegan a la escuela?</summary><p>Llegan los colectivos 603 y 619. Para paradas, recorridos y horarios, consultá la información oficial de las líneas.</p></details>
+      <details><summary>¿Cómo puedo comunicarme con la institución?</summary><p>Por teléfono al 011 4258-4354 o al celular +54 9 11 2761-3366, por correo a eestn5berazategui@gmail.com o por Instagram en @tecnica_n5_berazategui.</p></details>
+      <details><summary>¿Dónde puedo consultar información sobre el ingreso?</summary><p>Fechas, requisitos y vacantes se consultan directamente con la escuela, por los medios de <a href="#contacto">contacto</a>.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="final">
+  <div class="wrap final">
+    <img src="./Assets/img/logo.jpeg" alt="Logo de la Técnica N.º 5" onerror="this.style.display='none'">
+    <h2>Tu futuro <span>empieza acá</span></h2>
+    <p class="lead">Estudiá, aprendé, descubrí y construí tu futuro en la educación técnica.</p>
+    <div class="hero-actions">
+      <a class="btn" href="#especialidades">Especialidades</a>
+      <a class="btn alt" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Calle+316+1869+Ranelagh+Berazategui+Buenos+Aires+Argentina">Ver ubicación</a>
+      <a class="btn alt" href="#contacto">Comunicate</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <h3>Escuela Técnica N.º 5</h3>
+    <p>Barrio Luz — Ranelagh, Berazategui</p>
+    <ul>
+      <li><a href="#escuela">Quiénes somos</a></li><li><a href="#especialidades">Especialidades</a></li>
+      <li><a href="#llegar">Cómo llegar</a></li><li><a href="#contacto">Contacto</a></li><li><a href="#faq">Preguntas</a></li>
+    </ul>
+  </div>
+</footer>
+
+<button id="top" aria-label="Volver al inicio">↑</button>
+<div id="lb" role="dialog" aria-modal="true" aria-label="Galería ampliada">
+  <button class="x" aria-label="Cerrar">✕</button><button class="p" aria-label="Anterior">‹</button><button class="n" aria-label="Siguiente">›</button>
+  <figure><div class="frame" id="lbimg"></div><figcaption id="lbcap"></figcaption></figure>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
