@@ -351,3 +351,43 @@ body{overflow-wrap:break-word}
  .wrap,main>section+section::before{width:min(1280px,88%)}
  body{font-size:1.12rem}
 }
+
+
+/* =====================================================
+   v4: invitación a la muestra (6 de noviembre)
+   ===================================================== */
+.evento{position:relative;display:grid;grid-template-columns:auto 1fr;gap:2.5rem;align-items:center;padding:2.4rem;background:linear-gradient(135deg,rgba(30,107,255,.22),rgba(7,20,40,.9) 55%,rgba(255,122,26,.14));border:1px solid var(--cyan);box-shadow:0 0 50px rgba(34,228,255,.18);clip-path:polygon(0 0,calc(100% - 34px) 0,100% 34px,100% 100%,34px 100%,0 calc(100% - 34px));overflow:hidden}
+.evento::before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(110deg,transparent 40%,rgba(34,228,255,.14) 50%,transparent 60%);transform:translateX(-100%);animation:sweep 5s infinite}
+.ev-date{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:190px;padding:1.6rem 1.2rem;text-align:center;background:var(--orange);color:#1a0b00;font-weight:900;font-style:italic;text-transform:uppercase;clip-path:polygon(0 0,calc(100% - 22px) 0,100% 22px,100% 100%,22px 100%,0 calc(100% - 22px));box-shadow:0 0 40px rgba(255,122,26,.5);animation:glowbox 3s ease-in-out infinite}
+@keyframes glowbox{50%{filter:drop-shadow(0 0 22px var(--orange))}}
+.ev-date small{font-size:.85rem;letter-spacing:.2em}
+.ev-date b{font-size:clamp(5rem,12vw,7.5rem);line-height:.95}
+.ev-date span{font-size:1.35rem;letter-spacing:.08em}
+.ev-kicker{display:flex;align-items:center;gap:.5rem;color:var(--cyan);font-weight:900;font-style:italic;letter-spacing:.14em;text-transform:uppercase;font-size:.9rem;margin-bottom:.6rem}
+.ev-kicker svg{width:20px;height:20px;color:var(--orange)}
+.ev-info h2{font-size:clamp(1.7rem,4.2vw,2.8rem)}
+.ev-info .lead{margin-bottom:1.2rem}
+.ev-data{list-style:none;display:grid;gap:.7rem;margin-bottom:1.4rem}
+.ev-data li{display:flex;gap:.7rem;align-items:flex-start}
+.ev-data svg{flex:none;width:24px;height:24px;color:var(--orange);margin-top:.15rem}
+.ev-data strong{color:var(--cyan)}
+.count{display:flex;gap:.7rem;flex-wrap:wrap;margin-bottom:.4rem}
+.count[hidden]{display:none}
+.count div{min-width:74px;padding:.55rem .8rem;text-align:center;background:rgba(3,8,20,.8);border:1px solid var(--line)}
+.count b{display:block;font:900 1.9rem/1.1 'Exo 2',sans-serif;font-style:italic;color:var(--white);font-variant-numeric:tabular-nums}
+.count span{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.ev-note{margin-top:1.1rem;font-size:.9rem;color:var(--muted);border-left:3px solid var(--orange);padding-left:.8rem}
+@media(max-width:900px){
+ .evento{grid-template-columns:1fr;padding:1.8rem 1.4rem;gap:1.6rem}
+ .ev-date{flex-direction:row;gap:.8rem;min-width:0;padding:1rem 1.2rem;justify-content:center;flex-wrap:wrap}
+ .ev-date b{font-size:3.6rem}
+ .ev-date small:first-child{display:none}
+}
+@media(max-width:600px){
+ .count{display:grid;grid-template-columns:repeat(4,1fr);gap:.4rem}
+ .count div{min-width:0;padding:.5rem .2rem}
+ .count b{font-size:1.4rem}
+ .count span{font-size:.62rem;letter-spacing:.06em}
+ .evento{clip-path:polygon(0 0,calc(100% - 20px) 0,100% 20px,100% 100%,20px 100%,0 calc(100% - 20px))}
+}
+@media(prefers-reduced-motion:reduce){.evento::before{display:none}}

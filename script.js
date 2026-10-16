@@ -125,7 +125,7 @@ if (h1 && !reduce) {
 /* Cinta de especialidades */
 const mq = $(".marq div");
 if (mq) {
-  const t = ["Informática", "Programación", "Construcciones", "Tu futuro también se construye acá"], half = [...t, ...t];
+  const t = ["Muestra 6 de noviembre", "Informática", "Programación", "Construcciones", "Tu futuro también se construye acá"], half = [...t, ...t];
   [...half, ...half].forEach(x => { const s = document.createElement("span"); s.textContent = x + " ◆"; mq.append(s); });
 }
 
@@ -168,4 +168,23 @@ if (hover && !reduce) {
     const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
     if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) show(cur + (dx < 0 ? 1 : -1));
   }, { passive: true });
+})();
+
+/* Cuenta regresiva a la muestra: viernes 6 de noviembre de 2026 */
+(function () {
+  const box = $("#count"); if (!box) return;
+  const target = new Date(2026, 10, 6, 0, 0, 0).getTime(); // mes 10 = noviembre
+  const f = { d: $("#cd-d"), h: $("#cd-h"), m: $("#cd-m"), s: $("#cd-s") };
+  function tick() {
+    const ms = target - Date.now();
+    if (ms <= 0) { box.hidden = true; return; }
+    const s = Math.floor(ms / 1000);
+    f.d.textContent = Math.floor(s / 86400);
+    f.h.textContent = String(Math.floor(s % 86400 / 3600)).padStart(2, "0");
+    f.m.textContent = String(Math.floor(s % 3600 / 60)).padStart(2, "0");
+    f.s.textContent = String(s % 60).padStart(2, "0");
+    box.hidden = false;
+    setTimeout(tick, 1000);
+  }
+  tick();
 })();
